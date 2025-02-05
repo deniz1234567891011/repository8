@@ -29,7 +29,7 @@ public List<Car> findAll(){
 }
 
 @GetMapping("/{id}")
-public Optional<Car> findById(Integer id){
+public Optional<Car> findById(@PathVariable Integer id){
 	return cService.findById(id);
 }
 @ResponseStatus(HttpStatus.CREATED)
